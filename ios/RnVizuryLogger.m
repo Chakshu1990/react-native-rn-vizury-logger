@@ -6,7 +6,7 @@
 RCT_EXPORT_MODULE()
 
 
-+(void)initalizationVizury:(UIApplication *)application packageId:(NSString*)packageId serverURL:(NSString*)serverURL cachingEnabled:(BOOL)cachingEnabled FCMEnabled:(BOOL)FCMEnabled  {
++(void)initalizationVizury:(UIApplication *)application   packageId:(NSString*)packageId serverURL:(NSString*)serverURL cachingEnabled:(BOOL)cachingEnabled FCMEnabled:(BOOL)FCMEnabled  {
     
     [VizuryEventLogger initializeEventLoggerInApplication:application WithPackageId:packageId
                                                 ServerURL: serverURL WithCachingEnabled:cachingEnabled AndWithFCMEnabled:FCMEnabled];
@@ -16,6 +16,14 @@ RCT_EXPORT_MODULE()
     [VizuryEventLogger didReceiveRemoteNotificationInApplication:application withUserInfo:userInfo];
 }
 
++(void)passAPNSToken:(NSString *)recieveAPNSTOken{
+    
+    NSLog(@"Pretending to create an event %@",recieveAPNSTOken);
+    NSData *data = [recieveAPNSTOken dataUsingEncoding:NSUTF8StringEncoding];
+    [VizuryEventLogger registerForPushWithToken:data];
+    
+    
+}
 RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnull NSNumber *)numberArgument callback:(RCTResponseSenderBlock)callback)
 {
     // TODO: Implement some actually useful functionality
