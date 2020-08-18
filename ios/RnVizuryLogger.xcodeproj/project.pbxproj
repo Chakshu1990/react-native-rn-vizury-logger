@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD719A5A24EBDC5800CC134E /* VizuryEventLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD719A5924EBDC5800CC134E /* VizuryEventLogger.framework */; };
+		CD719A7E24EC353B00CC134E /* RnVizuryLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD719A7D24EC353B00CC134E /* RnVizuryLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRnVizuryLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRnVizuryLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD719A5924EBDC5800CC134E /* VizuryEventLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VizuryEventLogger.framework; sourceTree = "<group>"; };
+		CD719A7C24EC353B00CC134E /* RnVizuryLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnVizuryLogger.h; sourceTree = "<group>"; };
+		CD719A7D24EC353B00CC134E /* RnVizuryLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnVizuryLogger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				CD719A7C24EC353B00CC134E /* RnVizuryLogger.h */,
+				CD719A7D24EC353B00CC134E /* RnVizuryLogger.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				CD719A5924EBDC5800CC134E /* VizuryEventLogger.framework */,
 			);
@@ -112,6 +117,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD719A7E24EC353B00CC134E /* RnVizuryLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +241,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/VizuryEventLogger.framework\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -256,6 +263,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/VizuryEventLogger.framework\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
