@@ -19,14 +19,14 @@ RCT_EXPORT_METHOD(passFCMToken:(NSString *)recieveFCMTOken)
 {
   NSData *data = [recieveFCMTOken dataUsingEncoding:NSUTF8StringEncoding];
   [VizuryEventLogger registerForPushWithToken:data];
-  RCTLogInfo(@"Pretending to create an event %@",recieveFCMTOken);
-  recivedFCMTOKEN = recieveFCMTOken;
+  NSLog(@"Pretending to create an event %@",recieveFCMTOken);
+  
 }
 
 RCT_EXPORT_METHOD(rejectionHandle:(NSString *)rejectRecieve)
 {
   [VizuryEventLogger didFailToRegisterForPush];
-  RCTLogInfo(@"Pretending to create an event %@",rejectRecieve);
+  NSLog(@"Pretending to create an event %@",rejectRecieve);
 }
 
 @end
