@@ -18,7 +18,7 @@ RCT_EXPORT_MODULE()
 
 +(void)passAPNSToken:(NSData *)data{
     
-    NSLog(@"Pretending to create an event %@",recieveAPNSTOken);
+    //NSLog(@"Pretending to create an event %@",recieveAPNSTOken);
    // NSData *data = [recieveAPNSTOken dataUsingEncoding:NSUTF8StringEncoding];
     [VizuryEventLogger registerForPushWithToken:data];
     
