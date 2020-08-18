@@ -1,9 +1,42 @@
 {
-  "name": "react-native-rn-vizury-logger",
-  "title": "React Native Rn Vizury Logger",
-  "version": "1.0.0",
+  "_from": "react-native-rn-vizury-logger@0.0.2",
+  "_id": "react-native-rn-vizury-logger@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-XG+dL8Kj7/xH2J7DuIZslQT2c847T/WIPc43qoknjORU2CDhCnupmL8SATeD6LcI+kFH7l+4s4j3Yji+qSW5Jg==",
+  "_location": "/react-native-rn-vizury-logger",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-rn-vizury-logger@0.0.2",
+    "name": "react-native-rn-vizury-logger",
+    "escapedName": "react-native-rn-vizury-logger",
+    "rawSpec": "0.0.2",
+    "saveSpec": null,
+    "fetchSpec": "0.0.2"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-rn-vizury-logger/-/react-native-rn-vizury-logger-0.0.2.tgz",
+  "_shasum": "e17fe790e8c93b1f8ab85b78b1b419c0d13672c2",
+  "_spec": "react-native-rn-vizury-logger@0.0.2",
+  "_where": "/Users/chakshu/Documents/React_native/demoNPM",
+  "author": {
+    "name": "Your Name",
+    "email": "yourname@email.com"
+  },
+  "bugs": {
+    "url": "https://github.com/github_account/react-native-rn-vizury-logger/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "TODO",
-  "main": "index.js",
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  },
   "files": [
     "README.md",
     "android",
@@ -11,30 +44,26 @@
     "ios",
     "react-native-rn-vizury-logger.podspec"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/github_account/react-native-rn-vizury-logger#readme",
+  "keywords": [
+    "react-native"
+  ],
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "main": "index.js",
+  "name": "react-native-rn-vizury-logger",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/github_account/react-native-rn-vizury-logger.git",
     "baseUrl": "https://github.com/github_account/react-native-rn-vizury-logger"
   },
-  "keywords": [
-    "react-native"
-  ],
-  "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT",
-  "licenseFilename": "LICENSE",
-  "readmeFilename": "README.md",
-  "peerDependencies": {
-    "react": "^16.8.1",
-    "react-native": ">=0.60.0-rc.0 <1.0.x"
-  },
-  "devDependencies": {
-    "react": "^16.9.0",
-    "react-native": "^0.61.5"
-  }
+  "title": "React Native Rn Vizury Logger",
+  "version": "0.0.2"
 }
