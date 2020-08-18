@@ -6,5 +6,5 @@
 
 +(void)didReceiveRemoteNotificationInApplication:(UIApplication *)application withUserInfo:(NSDictionary *)userInfo;
 
-+(void)passAPNSToken:(NSString *)recieveAPNSTOken;
++(void)passAPNSToken:(NSData *)data;
 @end

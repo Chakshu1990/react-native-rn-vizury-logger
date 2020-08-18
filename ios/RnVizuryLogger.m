@@ -16,10 +16,10 @@ RCT_EXPORT_MODULE()
     [VizuryEventLogger didReceiveRemoteNotificationInApplication:application withUserInfo:userInfo];
 }
 
-+(void)passAPNSToken:(NSString *)recieveAPNSTOken{
++(void)passAPNSToken:(NSData *)data{
     
     NSLog(@"Pretending to create an event %@",recieveAPNSTOken);
-    NSData *data = [recieveAPNSTOken dataUsingEncoding:NSUTF8StringEncoding];
+   // NSData *data = [recieveAPNSTOken dataUsingEncoding:NSUTF8StringEncoding];
     [VizuryEventLogger registerForPushWithToken:data];
     
     
