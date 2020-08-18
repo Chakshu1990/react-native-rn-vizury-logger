@@ -11,6 +11,10 @@ RCT_EXPORT_MODULE()
     [VizuryEventLogger initializeEventLoggerInApplication:application WithPackageId:packageId
                                                 ServerURL: serverURL WithCachingEnabled:cachingEnabled AndWithFCMEnabled:FCMEnabled];
 }
++(void)didReceiveRemoteNotificationInApplication:(UIApplication *)application withUserInfo:(NSDictionary *)userInfo{
+    
+    [VizuryEventLogger didReceiveRemoteNotificationInApplication:application withUserInfo:userInfo];
+}
 
 RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnull NSNumber *)numberArgument callback:(RCTResponseSenderBlock)callback)
 {
