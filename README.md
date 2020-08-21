@@ -40,26 +40,28 @@ First open terminal and go to project folder then do following steps
 In your AppDelegate file import the VizuryEventLogger
 
 Objective-C
-objc #import "RnVizuryLogger.h"
+objc `#import "RnVizuryLogger.h"`
 
 Add the following in didFinishLaunchingWithOptions method of AppDelegate to initialize the SDK
 
-   [RnVizuryLogger initalizationVizury:application packageId:@"500" serverURL:@"https://www.vizury.com/analyze/analyze.php" cachingEnabled:true FCMEnabled:true];
+   `[RnVizuryLogger initalizationVizury:application packageId:@"500" serverURL:@"https://www.vizury.com/analyze/analyze.php" cachingEnabled:true FCMEnabled:true];`
 
 Swift
-objc #import RnVizuryLogger
+objc `#import RnVizuryLogger`
 
 Update your AppDelegate
 
-swift class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate
+swift `class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate`
 
 Add the following in didFinishLaunchingWithOptions method of AppDelegate to initialize the SDK
 
-RnVizuryLogger.initializeEventLogger(in: application,
+`RnVizuryLogger.initializeEventLogger(in: application,
             withPackageId: packageId, 
             serverURL: serverUrl,
             withCachingEnabled: caching, 
-            AndWithFCMEnabled: isFCMEnabled)
+            AndWithFCMEnabled: isFCMEnabled)`
+
+
 Where 
   packageId     : packageId obtained from vizury
   serverURL     : serverURL obtained from vizury
