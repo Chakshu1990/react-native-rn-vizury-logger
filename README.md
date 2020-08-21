@@ -99,8 +99,9 @@ $ open your-project.xcworkspace
 Enabling FCM
 Create a Firebase project in the Firebase console if you don't already have one. Enter the Project-Name.
 
+<img src=“https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/firebase1.png">
 
-Sample Image
+
 
 Click on iOS option and in the next screen add the iOS Bundle Id. The iOS Bundle Id should be same as your apps bundle identifier. You can download the GoogleService-Info.plist file in the next step.
 
