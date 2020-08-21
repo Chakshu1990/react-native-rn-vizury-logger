@@ -100,7 +100,7 @@ $ open your-project.xcworkspace
 Enabling FCM
 Create a Firebase project in the Firebase console if you don't already have one. Enter the Project-Name.
 
-<img src=“https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/firebase1.png">
+![alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/firebase1.png?raw=true)
 
 
 
