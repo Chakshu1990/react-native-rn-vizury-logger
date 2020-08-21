@@ -125,14 +125,14 @@ Click on Cloud Messaging tab and upload APNs Authentication Key (.p8 format). Al
 While uploading APNs Authentication Key (.p8 format) you need to enter the Key Id and Team Id. 1. 'Key ID' is the id of the authentication key you created in Apple developer console under Certificates, Identifiers & Profiles -> Keys -> Select the particular certificate
 
 
-[alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/keyID.png?raw=true)
+![alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/keyID.png?raw=true)
 
 
 'Team ID' is the Team Member ID in Apple developer console under Membership -> Membership Details
 
 
 
-[alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/teamID.png?raw=true)
+![alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/teamID.png?raw=true)
 
 
 For ios react native integration you can also follow this link. 
