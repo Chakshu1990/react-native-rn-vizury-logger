@@ -113,5 +113,34 @@ Note : The GoogleService-Info.plist file that you have downloaded will have cert
 correspinding pod dependencies for the same or you can turn them off if you are not using them
 Next click on the Settings icon option of the created project.
 
+Image
+
+Click on Cloud Messaging tab and upload APNs Authentication Key (.p8 format). Also note down the the Server key as this will be required later during the integration. You can also upload APNs certificaties but configuration with auth keys is recommended as they are the more current method for sending notifications to iOS
 
 
+Image
+
+While uploading APNs Authentication Key (.p8 format) you need to enter the Key Id and Team Id. 1. 'Key ID' is the id of the authentication key you created in Apple developer console under Certificates, Identifiers & Profiles -> Keys -> Select the particular certificate
+
+
+image
+
+
+'Team ID' is the Team Member ID in Apple developer console under Membership -> Membership Details
+
+
+
+Image
+
+
+For ios react native integration you can also follow this link. 
+
+
+
+Configuring Application
+In your AppDelegate.m  file import the following 
+#import <Firebase.h>
+ #import "RNFirebaseNotifications.h"
+ #import "RNFirebaseMessaging.h"
+Drag the GoogleService-Info.plist file you just downloaded into the root of your Xcode project and add it to all targets
+Register for Push notifications inside didFinishLaunchingWithOptions method of you AppDelegate.m
