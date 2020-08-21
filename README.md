@@ -107,7 +107,7 @@ Create a Firebase project in the Firebase console if you don't already have one.
 Click on iOS option and in the next screen add the iOS Bundle Id. The iOS Bundle Id should be same as your apps bundle identifier. You can download the GoogleService-Info.plist file in the next step.
 
 
-Image 
+![alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/firebase3.png?raw=true)
 
 Note : The GoogleService-Info.plist file that you have downloaded will have certain settings like IS_ADS_ENABLED, IS_SIGNIN_ENABLED set as YES. You have to add 
 
@@ -115,24 +115,24 @@ Note : The GoogleService-Info.plist file that you have downloaded will have cert
 correspinding pod dependencies for the same or you can turn them off if you are not using them
 Next click on the Settings icon option of the created project.
 
-Image
+![alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/firebase3.png?raw=true)
 
 Click on Cloud Messaging tab and upload APNs Authentication Key (.p8 format). Also note down the the Server key as this will be required later during the integration. You can also upload APNs certificaties but configuration with auth keys is recommended as they are the more current method for sending notifications to iOS
 
 
-Image
+![alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/firebase4.png?raw=true)
 
 While uploading APNs Authentication Key (.p8 format) you need to enter the Key Id and Team Id. 1. 'Key ID' is the id of the authentication key you created in Apple developer console under Certificates, Identifiers & Profiles -> Keys -> Select the particular certificate
 
 
-image
+[alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/keyID.png?raw=true)
 
 
 'Team ID' is the Team Member ID in Apple developer console under Membership -> Membership Details
 
 
 
-Image
+[alt text](https://bytebucket.org/vizury/vizury-ios-sdk/raw/a311dc1a06a82b928939d6a2e81336c576f82a43/resources/teamID.png?raw=true)
 
 
 For ios react native integration you can also follow this link. 
