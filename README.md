@@ -10,7 +10,7 @@ This is npm package to integrate Vizury SDK in react-native
 
 ## Getting started
 
-`$ npm install react-native-rn-vizury-logger --save`
+`$ npm install react-native-rn-vizury-logger@0.0.5`
 
 ### Mostly automatic installation
 
