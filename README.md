@@ -10,7 +10,7 @@ This is npm package to integrate Vizury SDK in react-native
 
 ## Getting started
 
-`$ npm install react-native-rn-vizury-logger@0.0.5`
+`$ npm install react-native-rn-vizury-logger --save`
 
 ### Mostly automatic installation
 
@@ -142,14 +142,16 @@ For ios react native integration you can also follow this link.
 Configuring Application
 In your AppDelegate.m  file import the following 
 
-`#import <Firebase.h>
- #import "RNFirebaseNotifications.h"
- #import "RNFirebaseMessaging.h"`
+```javascript
+#import <Firebase.h>
+#import "RNFirebaseNotifications.h"
+#import "RNFirebaseMessaging.h"
+```
  
 Drag the GoogleService-Info.plist file you just downloaded into the root of your Xcode project and add it to all targets
 Register for Push notifications inside didFinishLaunchingWithOptions method of you AppDelegate.m
 
-`
+```javascript
 [FIRApp configure];
 [RNFirebaseNotifications configure];
 if([[UIDevice currentDevice] systemVersion].floatValue >= 8.0)
@@ -161,47 +163,60 @@ else
 {
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge)];
 }
-`
+```
 
 
 Getting Notification from FCM
 
 
-`- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+```javascript
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
   [[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];
-}`
+}
+```
 
-`- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+
+```javascript
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
     [application registerForRemoteNotifications];
   [[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];
-}`
+}
+```
 
 `// iOS 7 or iOS 6`
-`- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+```javascript
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
   NSLog(@"token %@",token);
   [RnVizuryLogger passAPNSToken:deviceToken];
     // Send token to server
-} `
+} 
+```
 
 
 
-`- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+```javascript
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 [RnVizuryLogger didReceiveRemoteNotificationInApplication:application withUserInfo:userInfo];
    [[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
     if(application.applicationState == UIApplicationStateInactive) {
         NSLog(@"Appilication Inactive - the user has tapped in the notification when app was closed or in background");
         [self customPushHandler:userInfo];
     }
-}`
+}
+```
 
 
-`- (void) customPushHandler:(NSDictionary *)notification {
+
+```javascript
+- (void) customPushHandler:(NSDictionary *)notification {
     if (notification !=nil && [notification objectForKey:@"deeplink"] != nil) {
         NSString* deeplink = [notification objectForKey:@"deeplink"];
         NSLog(@"%@",deeplink);
         // Here based on the deeplink you can open specific screens that's part of your app
     }
-}`
+}
+```
 
